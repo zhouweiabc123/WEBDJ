@@ -1,0 +1,364 @@
+    1  git init
+    2  git add read.txt
+    3  git add read.txt
+    4  ls -al
+    5  git commit -m "read.txt提交第一次"
+    6  [200~git config --global user.email "you@example.com"
+    7    git config --global user.name "Your Name"
+    8  ~
+    9  git config --global user.name "zhouweiabc123"
+   10  git config --global user.email "958227254@qq.com"
+   11  git commit -m "read.txt提交第一次"
+   12  ls -al
+   13  git push -u origin master
+   14  ssh-keygen -t rsa -C "958227254@qq.com"
+   15  open ~/.ssh
+   16  open C:Users/htsd/.ssh/id_rsa.pub
+   17  ls -a C:Users/htsd/.ssh/
+   18  ssh -T git@github.com
+   19  git push origin master
+   20  git push read.txt master
+   21  git add read.txt
+   22  git commit -m "测试提交到githup"
+   23  git push read.txt master
+   24  git remote add origin [200~ush orign master
+   25  git branch -M main
+   26  git remote add origin https://github.com/zhouweiabc123/testpublicrep.git
+   27  ls
+   28  git push -u oringin main
+   29  git push -u origin main
+   30  git push -u origin main
+   31  ls
+   32  ll
+   33  ls
+   34  ls -al
+   35  git add read.txt
+   36  git commit -m"新建有内容的txt文件提交"
+   37  git status
+   38  git status
+   39  git status
+   40  git add read1.txt
+   41  git commit read1.txt
+   42  git status
+   43  git add read.txt
+   44  git status
+   45  git rm read.txt
+   46  git rm read1.txt
+   47  git stauts
+   48  git add read.txt
+   49  git add test.txt
+   50  git log
+   51  git clpne https://gitee.com/zmister/MrDoc.git
+   52  git clone https://gitee.com/zmister/MrDoc.git
+   53  pip install -r requirements.txt
+   54  python manage.py runserver 0.0.0.0:80
+   55  python manage.py makemingrations
+   56  python manage.py makemigrations
+   57  python manage.py migrate
+   58  python manage.py createsuperuser
+   59  python manage.py createsuperuser
+   60  python manage.py makemigrations
+   61  python manage.py createsuperuser
+   62  manage.py createsuperuser
+   63  run manage.py createsuperuser
+   64  python manage.py createsuperuser
+   65  python manage.py runserver 0.0.0.0:80
+   66  python manage.py runserver 0.0.0.0:80
+   67  python manage.py createsuperuser
+   68  pip install mod_wsgi
+   69  python manage.py createsuperuser
+   70  pip install mod_wsgi-4.9.2-cp39-cp39-win_amd64.whl 
+   71  mod_wsgi-express module-config
+   72  python manage.py createsuperuser
+   73  git status
+   74  git add TestProject/
+   75  git commit
+   76  git clone https://github.com/zhouweiabc123/testpublicrep.git pymulu
+   77  git add .
+   78  git clone https://github.com/zhouweiabc123/testpublicrep.git pymulu
+   79  git add .
+   80  git init
+   81  git add .
+   82  git status
+   83  git commit -m "初始化"
+   84  git push
+   85  git status
+   86  git add .
+   87  git status
+   88  git push
+   89  git stauts
+   90  git stuats
+   91  git status
+   92  git status
+   93  git add .gitignore 
+   94  git commit
+   95  git status
+   96  git commit -m "第二次忽略提交"
+   97  git push
+   98  git stauts
+   99  ls
+  100  ll
+  101  du -sh test221010/
+  102  ll
+  103  ls
+  104  top
+  105  mkdir a
+  106  ls
+  107  rm -rf a/
+  108  ll
+  109  ll -s
+  110  ifconfig
+  111  touch a.log
+  112  ls 
+  113  vi a.log 
+  114  git status
+  115  git status
+  116  ping www.jd.com
+  117  git status
+  118  ll
+  119  ls -a
+  120  git checkout -b XmindBanch
+  121  git status
+  122  git chekout -b XmindBanch
+  123  git chekout -b XmindBanch
+  124  git branch
+  125  git pull XmindBanch
+  126  git pull https://github.com/zhouweiabc123/testpublicrep.git
+  127  git checkout XmindBanch
+  128  git chekout XmindBanch
+  129  git clone https://github.com/zhouweiabc123/testpublicrep.git
+  130  git status
+  131  git chekout XmindBanch
+  132  git init
+  133  git checkout XmindBanch
+  134  git fetch origin XmindBanch
+  135  git fetch main XmindBanch
+  136  git fetch XmindBanch
+  137  git checkout -b XmindBanch main/XmindBanch
+  138  git checkout -b XmindBanch main/XmindBanch
+  139  git checkout -b XmindBanch XmindBanch
+  140  git checkout -b xmindbanch
+  141  git chekout -b xmindbanch XmindBanch
+  142  git chekout -b xmindbanch origin/XmindBanch
+  143  git chekout -b xmindbanch main/XmindBanch
+  144  git status
+  145  touch a.txt
+  146  ls
+  147  git status
+  148  git add a.txt 
+  149  git status
+  150  git add testpublicrep/
+  151  git status
+  152  git commit -m"测试推送分支"
+  153  git push XmindBanch
+  154  git push --setupstream XmindBanch xmindbanch
+  155   git push --set-upstream XmindBanch xmindbanch
+  156   git push --set-upstream xmindbanch XmindBanch
+  157  git status
+  158  git push
+  159  git branch -set-upstream-to=main/XmindBanch
+  160  git branch -set-upstream xmindbanch main/XmindBanch
+  161  git branch --set-upstream xmindbanch main/XmindBanch
+  162  git branch --set-upstream-to xmindbanch main/XmindBanch
+  163  git branch --set-upstream-to xmindbanch origin/XmindBanch
+  164  git branch --set-upstream-to xmindbanch master/XmindBanch
+  165  git branch --set-upstream-to xmindbanch XmindBanch
+  166  git commit -m "第一次提交到分支"
+  167  git branch -a
+  168  git push
+  169  histoty
+  170  history
+  171  git push
+  172  cd xmindbanch
+  173  git branch
+  174  git branch -a
+  175  git pull
+  176  git branch --set-upstream-to origin/xmindbanch XmindBanch
+  177  git branch --set-upstream-to origin/XmindBanch XmindBanch
+  178  git branch --set-upstream-to xmindbanch XmindBanch
+  179  git pull
+  180  git pull origin/XmindBanch
+  181  git pull origin/xmindBanch
+  182  git reset --hard origin main
+  183  git branch 
+  184  git add .
+  185  git status
+  186  git commint -m "test"
+  187  git commit -m "test"
+  188  git push
+  189  git push test-1
+  190  git push --set-upstream test-1 test-1
+  191  git push --set-upstream origin/test-1 test-1
+  192  git branch
+  193  git checkout xmindbanch
+  194  ls
+  195  git branch
+  196  git clone https://github.com/zhouweiabc123/testpublicrep.git
+  197  ls
+  198  git branch
+  199  ls
+  200  git branch
+  201  git branch
+  202  ls -a
+  203  rm -rf .
+  204  ls
+  205  rm -rf *
+  206  ls
+  207  ls -a
+  208  ls
+  209  git status
+  210  git clone https://github.com/zhouweiabc123/testpublicrep.git
+  211  ls
+  212  ls -a
+  213  git status
+  214  git branch
+  215  histoy
+  216  history
+  217  histoty >> gitbat.txt
+  218  history >> gitbash.txt
+  219  ls
+  220  git status
+  221  git status | grep gitbash.txt 
+  222  ls
+  223  git status
+  224  git add gitbash.txt 
+  225  git commit -m "新增git历史命令文件提交"
+  226  git push
+  227  git status
+  228  git branch
+  229  free -m
+  230  du -sh TestProject/
+  231  git config -l
+  232  git config -l | grep http.postbuffer
+  233  git config http.postBuffer 524288000
+  234  git config -l | grep http.postbuffer
+  235  history
+  236  git config -l | grep http.postbuffer
+  237  git config -l | grep http.postbuffer
+  238  git status
+  239  git add testt.log
+  240  git add test.log
+  241  git add test221010/test/EmailSend_study.py 
+  242  git commit -m "20230112早上10点修改提交"
+  243  git status
+  244  git push
+  245  git push https://github.com/zhouweiabc123/testpublicrep.git
+  246  git push --help
+  247  git push
+  248  git pull --rebase origin master
+  249  git pull --rebase main master
+  250  git push .
+  251  git push
+  252  git commit -m"提交"
+  253  git push
+  254  git pull
+  255  git push
+  256  git status
+  257  git add .idea/workspace.xml 
+  258  git add .idea/pymulu.iml 
+  259  git add .idea/vcs.xml 
+  260  git status
+  261  git commit -m"202.0112拉取后再提交"
+  262  git push
+  263  git branch
+  264  git status
+  265  git add gitbash.txt 
+  266  git commit -m"git命令更新"
+  267  git push
+  268  git status
+  269  git status
+  270  git status
+  271  ls
+  272  du -sh
+  273  free -m
+  274  top
+  275  find -d -name "*test" .
+  276  find  -name "*test" .
+  277  find  -name "*test"
+  278  git status
+  279  git status
+  280  git add .
+  281  git add .
+  282  git status
+  283  git commit -m"20230210提交Excel需求数据分析和第一版Excel数据驱动自动化测试"
+  284  git push
+  285  git pull https://github.com/zhouweiabc123/WEBDJ.git
+  286  git innit
+  287  git init
+  288  git pull https://github.com/zhouweiabc123/WEBDJ.git
+  289  ls
+  290  touch a.txt
+  291  ls
+  292  vi a.txt 
+  293  cat a.txt
+  294  git status
+  295  git ad a.txt
+  296  git add a.txt
+  297  git status
+  298  git commit -m "提交a.txt"
+  299  ls
+  300  git pull a.txt
+  301  git push a.txt
+  302  git push .
+  303  git push --set-upstream . main
+  304  git push --set-upstream . master
+  305  git push .
+  306  git chekout main
+  307  git push --set-upstream . main
+  308  git push --set-upstream  main
+  309  git checkout
+  310  ls
+  311  git push --set-upstream  master
+  312  git show-ref
+  313  git remote -v
+  314  git remote add origin https://github.com/zhouweiabc123/WEBDJ.git
+  315  git push .
+  316  git status
+  317  git 
+  318  ls
+  319  vim README.md 
+  320  git status
+  321  git pull https://gitee.com/roncoocom/spring-boot-demo.git
+  322  git clone https://gitee.com/roncoocom/spring-boot-demo.git
+  323  git status
+  324  git commit -m"修改md"
+  325  git status
+  326  git add .
+  327  git commit -m"1"
+  328  git push .
+  329  git branch -m main
+  330  git push . main
+  331  git push origin -u main
+  332  git status
+  333  ls
+  334  vi a.txt 
+  335  git status
+  336  git add a.txt txt
+  337  git add a.txt
+  338  git commit -"test"
+  339  git commit -m"test"
+  340  git push .
+  341  git push origin -u main
+  342  git branch
+  343  git push --set-upstream . main
+  344  git push --set-upstream . ./main
+  345  ls
+  346  git status
+  347  git add AutoPlateTest/
+  348  git commit -m"测试提交DJ应用"
+  349  git push origin -u main
+  350  git status
+  351  git add .
+  352  git status
+  353  git commit -m"提交可上传文件功能"
+  354  git push origin -m main
+  355  git push .
+  356  git push origin -u main
+  357  git list
+  358  git rev-list
+  359  git branch
+  360  git history
+  361  git histories
+  362  history
+  363  git history > git_log.txt
+  364  history > git_log.txt

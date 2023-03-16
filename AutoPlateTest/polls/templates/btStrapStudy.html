@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>尝试调用bootstrap</title>
+<!--    <script src="static/jquery/jquery-3.0.0.js"/>-->
+<!--    <script src="static/bootstrap/dist/js/bootstrap.js"/>-->
+<!--<link href="static/bootstrap/dist/js/bootstrap.js" rel="stylesheet"/>-->
+<!--<link href="static/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>-->
+<!--    {% load static %}-->
+<!--    "{% static 'bootstrap/dist/js/bootstrap.js' %}"-->
+<!--    <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" type="text/css" rel="stylesheet"><link/>-->
+<!--    <script src="{% static 'jquery/jquery-3.0.0.js' %}"></script>-->
+<!--    <script src= "{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>-->
+
+<!--    <img src="{% static 'my_app/example.jpg' %}" alt="My image">-->
+<!--    <link href="E:/A_test/AutoPlateTest/static/admin/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet"><link/>-->
+<!--    <script src="E:/A_test/AutoPlateTest/static/admin/jquery/jquery-3.0.0.js"></script>-->
+<!--    <script src="E:A_test/AutoPlateTest/static/admin/bootstrap/dist/js/bootstrap.js"></script>-->
+
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/5.2.3/css/bootstrap.css" type="text/css" rel="stylesheet"><link/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/5.2.3/js/bootstrap.js"></script>
+    <script src="https://cdn.staticfile.org/vue/3.2.47/vue.cjs.js"></script>
+
+</head>
+<body>
+{% csrf_token %}
+欢迎来到网站111<br/>
+<input type="text"  id="inputtext1" placeholder="这是一个输入框"/><br/>
+<button id="testbt" class="btn btn-primary" type="button">按钮</button>
+<button id="testbt1"  class="btn btn-dark" type="button">数据加载按钮</button>
+<label id="la" for="inputtext">文本框</label>
+<input type="text"  id="inputtext" placeholder="好家伙"/><br/>
+
+<script>
+    $('#inputtext').on('input', function () {
+            let data = $(this).val()
+            $.ajax({
+                url: 'http://127.0.0.1:8000/polls/dictstudy',
+                type: 'get',
+                data: {'inputtext':data},
+                datatype:'json',
+                success: function (args) {
+<!--                    alert("成功！");-->
+                    console.log(args);
+                    console.log(typeof args);
+
+                    args=JSON.parse(args);
+                    console.log(args);
+                    console.log(typeof args.l[0].parm);
+                    console.log(args.l[0].parm);
+                    console.log(args.l[1].parm.userName);
+                    $('#aa').html(args.l[0].parm.userName);
+<!--                    $('#inputtext1').val(args.l[1].yqreponse.data.userId);-->
+                    let newdata=JSON.stringify(args.l[1].yqreponse.data)
+                    console.log(newdata)
+                    console.log(typeof newdata)
+                    $('#inputtext1').val(newdata);
+
+                }
+            })
+        })
+
+</script>
+<script>
+    $("#testbt").click(function(){
+        let param = JSON.stringify({a:'q'})
+        args=JSON.parse(param);
+        //var msg=$.parseJSON(args);'btn btn-secondary'
+        $('#testbt').css('background','red');
+        $('#testbt1').css('background','yellow');
+        console.log(args);
+        console.log(typeof args);
+        alert(args.a);
+    })
+
+</script>
+<script>
+$("#testbt1").click(function(){
+    console.log("你好！");
+    let btdata= $(this).text();
+    console.log(btdata);
+    $.ajax({
+        url:'http://10.10.51.73:8000/polls/dictstudy',
+        type:'get',
+        data:{'inputtext':btdata},
+        datatype:'json',
+        success:function(args){
+        alert("加载数据成功！");
+        console.log(args);
+        console.log("遍历响应数据");
+        args=JSON.parse(args);
+        console.log(args);
+        var ldata=args.l;
+        var rows=[];
+        for(var i=0;i<ldata.length;i++){
+            console.log(ldata[i])
+            console.log(typeof ldata[i])
+            console.log(ldata[i].tittle)
+            var strld='<tr class="table-info"> <td class="table-info">'+ldata[i].tittle+' </td><td >'+ldata[i].tj+'</td></tr><tr class="table-info"><td class="table-info">'+ldata[i].tj+'</td><td class=> b </td></tr>'
+            rows.push(strld)
+        }
+        var testdiv=document.getElementById("testdiv");
+        testdiv.innerHTML='<table class="table table-bordered"><tr class="table-warning"><td class="table-primary">参数1</td><td class="table-primary">参数2</td></tr><tbody>'+rows.join("")+'</tbody></table>';
+
+        }
+
+
+    })
+
+})
+</script>
+<button id="testbt2" class="btn btn-info"  type="button">按一下加载数据</button><br/>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<table class="table table-bordered">
+<!-- On tables -->
+<!--<table class="table-primary">...</table>-->
+<!--<table class="table-secondary">...</table>-->
+<!--<table class="table-success">...</table>-->
+<!--<table class="table-danger">...</table>-->
+<!--<table class="table-warning">...</table>-->
+<!--<table class="table-info">...</table>-->
+<!--<table class="table-light">...</table>-->
+<!--<table class="table-dark">...</table>-->
+
+<!-- On rows -->
+<tr class="table-primary">...</tr>
+<tr class="table-secondary">...</tr>
+<tr class="table-success">...</tr>
+<tr class="table-danger">...</tr>
+<tr class="table-warning">...</tr>
+<tr class="table-info">...</tr>
+<tr class="table-light">  <td class="table-warning">e</td>
+  <td id="aa" class="table-info">1</td>
+  <td class="table-light">g</td>
+  <td class="table-dark">h</td></tr>
+<tr class="table-dark">
+  <td class="table-warning">e</td>
+  <td class="table-info">f</td>
+  <td class="table-light">g</td>
+  <td class="table-dark">h</td></tr>
+
+<!-- On cells (`td` or `th`) -->
+<tr>
+
+  <td class="table-primary">a</td>
+  <td class="table-secondary">b</td>
+  <td class="table-success">c</td>
+  <td class="table-danger">d</td>
+
+</tr>
+</table>
+
+<span class="span span-primary">下面是后端响应的数据，放到表格里</span>
+<div id="testdiv">
+
+</div>
+<div>
+    <label>尝试使用内置模板引擎</label>
+
+</div>
+<!--<div id="app">{{ message }}</div>-->
+
+<!--<script>-->
+<!--  const { createApp } = Vue-->
+
+<!--  createApp({-->
+<!--    data() {-->
+<!--      return {-->
+<!--        message: 'Hello Vue!'-->
+<!--      }-->
+<!--    }-->
+<!--  }).mount('#app')-->
+<!--</script>-->
+</body>
+</html>
