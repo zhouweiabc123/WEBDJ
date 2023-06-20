@@ -1,0 +1,18 @@
+1、pyinstaller打包命令
+-F 打包单个文件
+-D 打包多个文件
+-i 将ico图添加为可执行文件的资源和改变程序图标
+-d 产生debug版本的可执行文件
+-p 搜索导入的路径，允许多条路径，使用;来分隔指定的多个目录（Linux需要使用来区分）
+-c 打开控制台窗口
+-W 不打开控制台
+pyinstaller -D -w -i ./static/twogirl.ico TestDemoTk.py
+
+2、虚拟环境打包
+首先安装  pip install virtualenv
+然后创建一个虚拟环境，放在需要打包的python文件夹里  virtualenv py2exe_env
+接着进入script文件夹里，启动虚拟环境  activate py2exe_env
+再使用 pip 命令安装需要用到的模块
+最后打包命令打包
+pyinstaller -F -w -i ./static/oengirl.ico -n Demo TestDemoTk.py
+
