@@ -83,7 +83,7 @@ $("#testbt1").click(function(){
     let btdata= $(this).text();
     console.log(btdata);
     $.ajax({
-        url:'http://10.10.51.73:8000/polls/dictstudy',
+        url:'http://127.0.0.1:8000/polls/dictstudy',
         type:'get',
         data:{'inputtext':btdata},
         datatype:'json',

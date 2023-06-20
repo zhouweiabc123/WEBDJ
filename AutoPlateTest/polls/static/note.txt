@@ -1,0 +1,5 @@
+Django项目创建
+django-admin startproject 项目名
+python manage.py runserver
+python manage.py startapp 应用名
+需要到setting文件里激活，或installed_apps里面注册，添加 xxx.apps.xxxConfig
