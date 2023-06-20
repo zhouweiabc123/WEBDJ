@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接口data页</title>
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/5.2.3/css/bootstrap.css" type="text/css" rel="stylesheet"><link/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/5.2.3/js/bootstrap.js"></script>
+    <script src="https://cdn.staticfile.org/vue/3.2.47/vue.cjs.js"></script>
+
+</head>
+<body>
+<div id="tabledata">
+    <button id="sendbtn">发送接口请求</button>
+    <table id="api_data" border="1">
+  <colgroup>
+    <col />
+    <col style="background-color: yellow" />
+  </colgroup>
+  <tr>
+    <th>Data 1</th>
+    <th>Data 2</th>
+  </tr>
+  <tr>
+    <td name="tda" class="a">Calcutta</td>
+    <td name="tda" class="a">Orange</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td>Jazz</td>
+  </tr>
+</table>
+
+</div>
+<div id="resdiv">
+    <p>下面是接口返回结果：</p>
+</div>
+<script>
+       $("#sendbtn").click(function(){
+<!--            let param = JSON.stringify({a:'q'})-->
+<!--            args=JSON.parse(param);-->
+<!--            //var msg=$.parseJSON(args);'btn btn-secondary'-->
+<!--            $('#testbt').css('background','red');-->
+<!--            $('#testbt1').css('background','yellow');-->
+            console.log("args");
+            const a=$("#api_data tr .a");
+            console.log(typeof a);
+            console.log(a);
+            console.log(a[0].innerText);
+            console.log(a[1].innerText);
+            let dataa=a[0].innerText;
+            let datab=a[1].innerText;
+            //console.log(typeof args);
+            //alert("args");
+            $.ajax({
+                url:"http://127.0.0.1:8000/testapps/tableinfo",
+                data:{"da":dataa,"db":datab},
+                type:"get",
+                datatype:"json",
+                success:function(args){
+                    alert("发送请求，并成功接收了参数");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
